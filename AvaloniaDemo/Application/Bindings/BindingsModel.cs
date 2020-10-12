@@ -2,12 +2,16 @@ using Avalonia;
 
 namespace Application.Bindings
 {
-    public class BindingsModel : AvaloniaObject
+    public class BindingsModel : AvaloniaObject, IInterface
     {
         public BindingsModel()
         {
             Observable = new ObservableValue<string>(x => $"Clicked {x} time(s)");
+            this.Prop = "asdf";
         }
+
+        public string Prop { get; set; }
+        int IInterface.Prop { get; }
 
         public static readonly StyledProperty<string> PropertyProperty = AvaloniaProperty.Register<BindingsModel, string>("Property");
         public static readonly StyledProperty<bool> CheckBoxStateProperty = AvaloniaProperty.Register<BindingsModel, bool>("CheckBoxState");

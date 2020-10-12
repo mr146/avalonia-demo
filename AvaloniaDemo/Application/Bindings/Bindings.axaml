@@ -1,0 +1,41 @@
+<UserControl x:Class="Application.Bindings.Bindings"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:bindings="clr-namespace:Application.Bindings"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance bindings:BindingsModel}">
+    <StackPanel Name="TopLevelStackPanel" Width="150" HorizontalAlignment="Left">
+        <StackPanel>
+            <TextBlock FontSize="20">Property</TextBlock>
+            <TextBox Text="{Binding Property}" />
+            <TextBlock Text="{Binding Property}" />
+        </StackPanel>
+        <StackPanel>
+            <TextBlock FontSize="20">$self</TextBlock>
+            <TextBlock Name="TextBlockName" Text="{Binding $self.Name}" />
+        </StackPanel>
+        <StackPanel Name="StackPanel">
+            <TextBlock FontSize="20">$parent</TextBlock>
+            <TextBlock Text="{Binding $parent.Name}" />
+            <TextBlock Text="{Binding $parent[StackPanel].Name}" />
+            <TextBlock Text="{Binding $parent[StackPanel;0].Name}" />
+            <TextBlock Text="{Binding $parent[StackPanel;1].Name}" />
+            <TextBlock Text="{Binding $parent[StackPanel;2].Name}" />
+        </StackPanel>
+        <StackPanel>
+            <TextBlock FontSize="20">#Name</TextBlock>
+            <TextBlock Text="{Binding #StackPanel.Name}" />
+        </StackPanel>
+        <StackPanel>
+            <TextBlock FontSize="20">Observables and tasks</TextBlock>
+            <Button Content="{Binding Observable^}" Command="{Binding OnButtonClick}" />
+        </StackPanel>
+        <StackPanel>
+            <TextBlock FontSize="20">Bool cast sugar</TextBlock>
+            <CheckBox IsChecked="{Binding !!Counter, Mode=OneWay}">Is odd</CheckBox>
+            <CheckBox IsChecked="{Binding !Counter, Mode=OneWay}">Is even</CheckBox>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

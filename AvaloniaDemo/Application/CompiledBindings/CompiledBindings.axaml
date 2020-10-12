@@ -1,0 +1,41 @@
+<UserControl x:Class="Application.CompiledBindings.CompiledBindings"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:compiledBindings="clr-namespace:Application.CompiledBindings"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance compiledBindings:CompiledBindings}"
+             >
+    <StackPanel>
+        <!--<TextBlock Text="{CompiledBinding Model.A}"/>-->
+        <StackPanel x:DataType="compiledBindings:CompiledBindings">
+            <TextBlock Text="{CompiledBinding Model.A}" />
+            <!--<TextBlock DataContext="{Binding Model}" Text="{CompiledBinding B}"></TextBlock>-->
+            <!--<TextBlock Text="{CompiledBinding B, FallbackValue=Fallback}"/>-->
+            <TextBlock DataContext="{Binding Model}" x:DataType="compiledBindings:CompiledBindingsModel"
+                       Text="{CompiledBinding B}" />
+        </StackPanel>
+        <!--<StackPanel x:DataType="compiledBindings:CompiledBindingsModel">
+            <TextBlock DataContext="{Binding Model}" Text="{CompiledBinding}"/>
+        </StackPanel>-->
+        <StackPanel DataContext="{Binding Model}">
+            <TextBlock x:DataType="compiledBindings:CompiledBindingsModel" Text="{CompiledBinding C}" />
+        </StackPanel>
+        <StackPanel x:DataType="compiledBindings:CompiledBindingsModel" DataContext="{Binding Model}">
+            <TextBlock Text="{CompiledBinding D}"/>
+        </StackPanel>
+        <StackPanel x:DataType="compiledBindings:CompiledBindingsModel">
+            <StackPanel.DataContext>
+                <Binding Path="Model" />
+            </StackPanel.DataContext>
+            <TextBlock Text="{CompiledBinding E}" />
+        </StackPanel>
+        <StackPanel x:DataType="compiledBindings:CompiledBindingsModel">
+            <StackPanel.DataContext>
+                <Binding Path="Prop"/>
+            </StackPanel.DataContext>
+            <TextBlock Text="{CompiledBinding F, FallbackValue=Fallback for F}" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

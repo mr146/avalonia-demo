@@ -1,0 +1,32 @@
+<UserControl x:Class="Application.Styling.Styling"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="BGColor1" Color="Aquamarine" />
+        <SolidColorBrush x:Key="BGColor2" Color="Bisque" />
+    </UserControl.Resources>
+    <UserControl.Styles>
+        <Style Selector="TextBlock">
+            <Setter Property="Background" Value="{DynamicResource BGColor1}" />
+        </Style>
+        <Style Selector="TextBlock.narrow">
+            <Setter Property="Width" Value="100" />
+        </Style>
+        <Style Selector="TextBlock.normal">
+            <Setter Property="Width" Value="200" />
+        </Style>
+        <Style Selector="TextBlock.wide">
+            <Setter Property="Width" Value="300" />
+        </Style>
+        <Style Selector="TextBlock.normal[Height=70]">
+            <Setter Property="Background" Value="{DynamicResource BGColor2}" />
+        </Style>
+    </UserControl.Styles>
+    <StackPanel>
+        <TextBlock Classes="narrow">Narrow</TextBlock>
+        <TextBlock Classes="normal">Normal</TextBlock>
+        <TextBlock Classes="normal" Height="70">Normal2</TextBlock>
+        <TextBlock Classes="wide">Wide</TextBlock>
+    </StackPanel>
+</UserControl>

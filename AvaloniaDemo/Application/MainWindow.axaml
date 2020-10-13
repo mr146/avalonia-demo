@@ -5,12 +5,15 @@
         xmlns:bindings="clr-namespace:Application.Bindings"
         xmlns:compiledBindings="clr-namespace:Application.CompiledBindings"
         xmlns:styling="clr-namespace:Application.Styling"
+        xmlns:application="clr-namespace:Application"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Application.MainWindow"
         Title="Application">
-    <Grid ColumnDefinitions="*,*,*">
+    <Grid>
+        <Grid.ColumnDefinitions>*,*,*</Grid.ColumnDefinitions>
         <bindings:Bindings Grid.Column="0" />
         <compiledBindings:CompiledBindings Grid.Column="1" />
         <styling:Styling Grid.Column="2" />
+        <application:Grids/>
     </Grid>
 </Window>

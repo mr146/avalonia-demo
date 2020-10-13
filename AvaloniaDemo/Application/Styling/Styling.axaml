@@ -16,6 +16,8 @@
         <Style Selector="TextBlock.normal">
             <Setter Property="Width" Value="200" />
         </Style>
+    </UserControl.Styles>
+    <UserControl.Styles>
         <Style Selector="TextBlock.wide">
             <Setter Property="Width" Value="300" />
         </Style>

@@ -10,8 +10,8 @@
         <StackPanel>
             <TextBlock FontSize="20">Property</TextBlock>
             <TextBox Text="{Binding Property}" />
-			<TextBlock Text="{Binding Property}" />
-			<TextBlock Text="{Binding Prop}" />
+            <TextBlock Text="{Binding Property}" />
+            <TextBlock Text="{Binding Prop}" />
         </StackPanel>
         <StackPanel>
             <TextBlock FontSize="20">$self</TextBlock>

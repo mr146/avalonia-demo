@@ -1,0 +1,16 @@
+<UserControl x:Class="Application.Enumerables.Enumerables"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:enumerables="clr-namespace:Application.Enumerables">
+    <enumerables:MyComponent>
+        <enumerables:MyComponent.ContentEnumerable>
+            <TextBlock />
+            <TextBlock />
+            <TextBlock />
+        </enumerables:MyComponent.ContentEnumerable>
+        <enumerables:MyComponent.ContentEnumerable>
+            <TextBlock />
+            <TextBlock />
+        </enumerables:MyComponent.ContentEnumerable>
+    </enumerables:MyComponent>
+</UserControl>

@@ -6,14 +6,16 @@
         xmlns:compiledBindings="clr-namespace:Application.CompiledBindings"
         xmlns:styling="clr-namespace:Application.Styling"
         xmlns:application="clr-namespace:Application"
+        xmlns:enumerables="clr-namespace:Application.Enumerables"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Application.MainWindow"
         Title="Application">
     <Grid>
-        <Grid.ColumnDefinitions>*,*,*</Grid.ColumnDefinitions>
+        <Grid.ColumnDefinitions>*,*,*,*,*</Grid.ColumnDefinitions>
         <bindings:Bindings Grid.Column="0" />
         <compiledBindings:CompiledBindings Grid.Column="1" />
         <styling:Styling Grid.Column="2" />
-        <application:Grids/>
+        <application:Grids Grid.Column="3" />
+        <enumerables:Enumerables Grid.Column="4" />
     </Grid>
 </Window>

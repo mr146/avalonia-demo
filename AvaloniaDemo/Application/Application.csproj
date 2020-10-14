@@ -1,10 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.999-cibuild0011267-beta" />
-    <PackageReference Include="Avalonia.Desktop" Version="0.10.999-cibuild0011267-beta" />
-  </ItemGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+	</PropertyGroup>
+	<ItemGroup>
+		<AvaloniaResource Include="Assets/zzz.png" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Avalonia" Version="0.10.999-cibuild0011267-beta" />
+		<PackageReference Include="Avalonia.Desktop" Version="0.10.999-cibuild0011267-beta" />
+	</ItemGroup>
 </Project>

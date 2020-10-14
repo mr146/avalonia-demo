@@ -4,7 +4,7 @@
              xmlns:system="clr-namespace:System;assembly=System.Runtime">
     <UserControl.Resources>
         <SolidColorBrush x:Key="BGColor1" Color="Aquamarine" />
-        <SolidColorBrush x:Key="BGColor2" Color="Bisque" />
+        <Color x:Key="BGColor2">Bisque</Color>
     </UserControl.Resources>
     <UserControl.Styles>
         <Style Selector="TextBlock">

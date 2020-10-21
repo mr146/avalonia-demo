@@ -5,6 +5,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:enumerables="clr-namespace:Application.Enumerables"
              mc:Ignorable="d"
+             Zzz="asdf"
              d:DataContext="{d:DesignInstance enumerables:MyComponent}">
-    <TextBlock Text="{Binding ContentEnumerable.Count}" />
+    <StackPanel>
+        <TextBlock Text="{Binding ContentEnumerable.Count, Mode=OneWay}" />
+        <TextBlock Text="{Binding Zzz}" />
+    </StackPanel>
 </UserControl>

@@ -1,7 +1,6 @@
 <UserControl x:Class="Application.Styling.Styling"
              xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:system="clr-namespace:System;assembly=System.Runtime">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <UserControl.Resources>
         <SolidColorBrush x:Key="BGColor1" Color="Aquamarine" />
         <Color x:Key="BGColor2">Bisque</Color>
@@ -24,6 +23,7 @@
         <Style Selector="TextBlock.normal[Height=70]">
             <Setter Property="Background" Value="{DynamicResource BGColor2}" />
         </Style>
+        <Style Selector="StackPanel > TextBlock Button:pressed" />
     </UserControl.Styles>
     <StackPanel>
         <TextBlock Classes="narrow">Narrow</TextBlock>

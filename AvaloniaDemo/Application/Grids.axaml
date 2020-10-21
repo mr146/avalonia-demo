@@ -8,7 +8,7 @@
         </Grid.RowDefinitions>
         <Grid>
             <Grid.ColumnDefinitions>* Auto *</Grid.ColumnDefinitions>
-            <Image Grid.Column="0" Source="./Assets/zzz.png"/>
+            <Image Grid.Column="0" Source="avares://Application/Assets/zzz.png"/>
             <TextBlock Grid.Column="1" />
             <TextBlock Grid.Column="2" />
         </Grid>

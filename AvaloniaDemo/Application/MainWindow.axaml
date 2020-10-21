@@ -11,11 +11,13 @@
         x:Class="Application.MainWindow"
         Title="Application">
     <Grid>
-        <Grid.ColumnDefinitions>*,*,*,*,*</Grid.ColumnDefinitions>
+        <Grid.ColumnDefinitions>*,*,*,*,*,*,*</Grid.ColumnDefinitions>
         <bindings:Bindings Grid.Column="0" />
-        <compiledBindings:CompiledBindings Grid.Column="1" />
-        <styling:Styling Grid.Column="2" />
-        <application:Grids Grid.Column="3" />
-        <enumerables:Enumerables Grid.Column="4" />
+        <!--<compiledBindings:CompiledBindings Grid.Column="1" />
+        <compiledBindings:CompiledBindingsWithFlag Grid.Column="2" />-->
+        <styling:Styling Grid.Column="3" />
+        <application:Grids Grid.Column="4" />
+        <enumerables:Enumerables Grid.Column="5" />
+        <compiledBindings:CompiledBindingsConvertible Grid.Column="6" />
     </Grid>
 </Window>

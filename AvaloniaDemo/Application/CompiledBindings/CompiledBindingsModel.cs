@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Application.CompiledBindings
 {
     public class CompiledBindingsModel
@@ -10,6 +12,21 @@ namespace Application.CompiledBindings
             D = "Value D";
             E = "Value E";
             F = "Value F";
+            Arr = new[]
+            {
+                new ArrayMember
+                {
+                    Property = "a[0]",
+                },
+                new ArrayMember
+                {
+                    Property = "a[1]",
+                },
+                new ArrayMember
+                {
+                    Property = "a[2]",
+                },
+            };
         }
 
         public string A { get; set; }
@@ -18,5 +35,11 @@ namespace Application.CompiledBindings
         public string D { get; set; }
         public string E { get; set; }
         public string F { get; set; }
+        public IEnumerable<ArrayMember> Arr { get; set; }
+    }
+
+    public class ArrayMember
+    {
+        public string Property { get; set; }
     }
 }
